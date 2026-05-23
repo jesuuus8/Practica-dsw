@@ -1,16 +1,114 @@
 <!doctype html>
-<html>
+<html class="light" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskQuest</title>
+    <title>TaskQuest - El Centro</title>
+    <meta name="description" content="TaskQuest - Tu plataforma gamificada de productividad universitaria" />
+
+    <!-- Tailwind CSS with Forms & Container Queries plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Custom Theme (Material You Design System) -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#8a47eb",
+              "on-secondary-fixed-variant": "#763300",
+              "secondary-container": "#fe893c",
+              "on-background": "#191c1e",
+              "outline": "#747687",
+              "primary-container": "#3e5cff",
+              "surface": "#f7f9fb",
+              "on-tertiary-fixed-variant": "#5f00c0",
+              "on-primary-fixed-variant": "#002dcc",
+              "inverse-surface": "#2d3133",
+              "surface-container-highest": "#e0e3e5",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1e",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#faf0ff",
+              "on-error": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "background": "#f7f9fb",
+              "tertiary-fixed": "#ecdcff",
+              "surface-variant": "#e0e3e5",
+              "secondary-fixed-dim": "#ffb68d",
+              "surface-tint": "#2748ee",
+              "primary": "#1a3fe6",
+              "on-secondary-container": "#672c00",
+              "on-secondary-fixed": "#321200",
+              "on-primary-fixed": "#000f5c",
+              "inverse-on-surface": "#eff1f3",
+              "primary-fixed": "#dee0ff",
+              "error": "#ba1a1a",
+              "outline-variant": "#c4c5d9",
+              "on-surface-variant": "#444656",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#d6baff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#ffdbc9",
+              "on-primary": "#ffffff",
+              "surface-container": "#eceef0",
+              "primary-fixed-dim": "#bbc3ff",
+              "secondary": "#9a4600",
+              "surface-container-low": "#f2f4f6",
+              "inverse-primary": "#bbc3ff",
+              "on-primary-container": "#f4f2ff",
+              "tertiary": "#7026d1",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "on-tertiary-fixed": "#280057",
+              "surface-dim": "#d8dadc"
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px"
+            },
+            spacing: {
+              base: "8px",
+              "margin-mobile": "20px",
+              "margin-desktop": "40px",
+              "gutter-sm": "16px",
+              "gutter-md": "24px",
+              "container-max": "1200px"
+            },
+            fontFamily: {
+              "label-lg": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "display-lg": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "label-sm": ["Plus Jakarta Sans"]
+            },
+            fontSize: {
+              "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+              "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+              "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+              "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }]
+            }
+          }
+        }
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <!-- Tailwind Play CDN for quick styling + UMD React shims -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

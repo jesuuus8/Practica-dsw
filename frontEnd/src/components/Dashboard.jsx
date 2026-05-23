@@ -197,33 +197,6 @@ function TeamChat() {
   );
 }
 
-function BottomNavBar() {
-  return (
-    <nav className="bg-surface shadow docked full-width bottom-0 rounded-t-lg fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-4 pt-2">
-      <button className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 transition-transform duration-200 active:scale-90">
-        <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>dashboard</span>
-        <span className="text-xs">Inicio</span>
-      </button>
-      <button className="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-all active:scale-90 duration-200">
-        <span className="material-symbols-outlined">assignment_turned_in</span>
-        <span className="text-xs">Misiones</span>
-      </button>
-      <button className="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-all active:scale-90 duration-200">
-        <span className="material-symbols-outlined">leaderboard</span>
-        <span className="text-xs">Progreso</span>
-      </button>
-      <button className="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-all active:scale-90 duration-200">
-        <span className="material-symbols-outlined">groups</span>
-        <span className="text-xs">Equipos</span>
-      </button>
-      <button className="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-all active:scale-90 duration-200">
-        <span className="material-symbols-outlined">settings</span>
-        <span className="text-xs">Ajustes</span>
-      </button>
-    </nav>
-  );
-}
-
 function FloatingActionButton() {
   return (
     <button className="fixed bottom-24 right-6 w-14 h-14 bg-tertiary-container text-on-tertiary-container rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110 active:scale-95 z-40">
@@ -246,7 +219,6 @@ export default function Dashboard() {
           <TeamChat />
         </div>
       </main>
-      <BottomNavBar />
       <FloatingActionButton />
     </div>
   );

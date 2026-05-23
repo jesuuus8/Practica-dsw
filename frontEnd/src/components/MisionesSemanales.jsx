@@ -126,29 +126,6 @@ export default function MisionesSemanales() {
           />
         </section>
       </main>
-      {/* BottomNavBar */}
-      <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-surface-container-lowest shadow rounded-t-lg">
-        <a className="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined" data-icon="grid_view">grid_view</span>
-          <span className="font-label-sm text-label-sm">Hub</span>
-        </a>
-        <a className="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-3 py-1.5 transition-transform active:scale-90 duration-200" href="#">
-          <span className="material-symbols-outlined" data-icon="assignment" style={{ fontVariationSettings: "'FILL' 1" }}>assignment</span>
-          <span className="font-label-sm text-label-sm">Quests</span>
-        </a>
-        <a className="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined" data-icon="analytics">analytics</span>
-          <span className="font-label-sm text-label-sm">Progreso</span>
-        </a>
-        <a className="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined" data-icon="groups">groups</span>
-          <span className="font-label-sm text-label-sm">Equipos</span>
-        </a>
-        <a className="flex flex-col items-center justify-center text-on-surface-variant px-3 py-1.5 hover:text-primary transition-colors" href="#">
-          <span className="material-symbols-outlined" data-icon="settings">settings</span>
-          <span className="font-label-sm text-label-sm">Ajustes</span>
-        </a>
-      </nav>
       {/* FAB */}
       <button className="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center active:scale-95 transition-all z-40">
         <span className="material-symbols-outlined !text-3xl">add</span>
