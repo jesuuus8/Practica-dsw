@@ -16,6 +16,11 @@ public class Grupo {
 
     private String imagenUrl;
 
+    private String descripcion;
+
+    @Enumerated(EnumType.STRING)
+    private EnvironmentType environmentType;
+
     @ManyToMany
     @JoinTable(name = "grupo_miembros",
             joinColumns = @JoinColumn(name = "grupo_id"),
@@ -23,6 +28,9 @@ public class Grupo {
     private Set<Usuario> miembros = new HashSet<>();
 
     public Grupo() {}
+
+    public EnvironmentType getEnvironmentType() { return environmentType; }
+    public void setEnvironmentType(EnvironmentType environmentType) { this.environmentType = environmentType; }
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -35,4 +43,7 @@ public class Grupo {
 
     public String getImagenUrl() { return imagenUrl; }
     public void setImagenUrl(String imagenUrl) { this.imagenUrl = imagenUrl; }
+
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
 }

@@ -3,8 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskQuest - El Centro</title>
-    <meta name="description" content="TaskQuest - Tu plataforma gamificada de productividad universitaria" />
+    <title>Gamify - El Centro</title>
+    <meta name="description" content="Gamify - Tu plataforma gamificada de productividad universitaria" />
+
+    <!-- Script de inicialización de modo oscuro -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
 
     <!-- Tailwind CSS with Forms & Container Queries plugins -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -20,53 +32,53 @@
         theme: {
           extend: {
             colors: {
-              "tertiary-container": "#8a47eb",
-              "on-secondary-fixed-variant": "#763300",
-              "secondary-container": "#fe893c",
-              "on-background": "#191c1e",
-              "outline": "#747687",
-              "primary-container": "#3e5cff",
-              "surface": "#f7f9fb",
-              "on-tertiary-fixed-variant": "#5f00c0",
-              "on-primary-fixed-variant": "#002dcc",
-              "inverse-surface": "#2d3133",
-              "surface-container-highest": "#e0e3e5",
-              "on-error-container": "#93000a",
-              "on-surface": "#191c1e",
-              "error-container": "#ffdad6",
-              "on-tertiary-container": "#faf0ff",
-              "on-error": "#ffffff",
-              "surface-container-high": "#e6e8ea",
-              "background": "#f7f9fb",
-              "tertiary-fixed": "#ecdcff",
-              "surface-variant": "#e0e3e5",
-              "secondary-fixed-dim": "#ffb68d",
-              "surface-tint": "#2748ee",
-              "primary": "#1a3fe6",
-              "on-secondary-container": "#672c00",
-              "on-secondary-fixed": "#321200",
-              "on-primary-fixed": "#000f5c",
-              "inverse-on-surface": "#eff1f3",
-              "primary-fixed": "#dee0ff",
-              "error": "#ba1a1a",
-              "outline-variant": "#c4c5d9",
-              "on-surface-variant": "#444656",
-              "on-tertiary": "#ffffff",
-              "tertiary-fixed-dim": "#d6baff",
-              "surface-container-lowest": "#ffffff",
-              "secondary-fixed": "#ffdbc9",
-              "on-primary": "#ffffff",
-              "surface-container": "#eceef0",
-              "primary-fixed-dim": "#bbc3ff",
-              "secondary": "#9a4600",
-              "surface-container-low": "#f2f4f6",
-              "inverse-primary": "#bbc3ff",
-              "on-primary-container": "#f4f2ff",
-              "tertiary": "#7026d1",
-              "on-secondary": "#ffffff",
-              "surface-bright": "#f7f9fb",
-              "on-tertiary-fixed": "#280057",
-              "surface-dim": "#d8dadc"
+              "tertiary-container": "var(--tertiary-container)",
+              "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+              "secondary-container": "var(--secondary-container)",
+              "on-background": "var(--on-background)",
+              "outline": "var(--outline)",
+              "primary-container": "var(--primary-container)",
+              "surface": "var(--surface)",
+              "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+              "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+              "inverse-surface": "var(--inverse-surface)",
+              "surface-container-highest": "var(--surface-container-highest)",
+              "on-error-container": "var(--on-error-container)",
+              "on-surface": "var(--on-surface)",
+              "error-container": "var(--error-container)",
+              "on-tertiary-container": "var(--on-tertiary-container)",
+              "on-error": "var(--on-error)",
+              "surface-container-high": "var(--surface-container-high)",
+              "background": "var(--background)",
+              "tertiary-fixed": "var(--tertiary-fixed)",
+              "surface-variant": "var(--surface-variant)",
+              "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+              "surface-tint": "var(--surface-tint)",
+              "primary": "var(--primary)",
+              "on-secondary-container": "var(--on-secondary-container)",
+              "on-secondary-fixed": "var(--on-secondary-fixed)",
+              "on-primary-fixed": "var(--on-primary-fixed)",
+              "inverse-on-surface": "var(--inverse-on-surface)",
+              "primary-fixed": "var(--primary-fixed)",
+              "error": "var(--error)",
+              "outline-variant": "var(--outline-variant)",
+              "on-surface-variant": "var(--on-surface-variant)",
+              "on-tertiary": "var(--on-tertiary)",
+              "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+              "surface-container-lowest": "var(--surface-container-lowest)",
+              "secondary-fixed": "var(--secondary-fixed)",
+              "on-primary": "var(--on-primary)",
+              "surface-container": "var(--surface-container)",
+              "primary-fixed-dim": "var(--primary-fixed-dim)",
+              "secondary": "var(--secondary)",
+              "surface-container-low": "var(--surface-container-low)",
+              "inverse-primary": "var(--inverse-primary)",
+              "on-primary-container": "var(--on-primary-container)",
+              "tertiary": "var(--tertiary)",
+              "on-secondary": "var(--on-secondary)",
+              "surface-bright": "var(--surface-bright)",
+              "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+              "surface-dim": "var(--surface-dim)"
             },
             borderRadius: {
               DEFAULT: "1rem",

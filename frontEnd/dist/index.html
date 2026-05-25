@@ -1,17 +1,127 @@
 <!doctype html>
-<html>
+<html class="light" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TaskQuest</title>
-    <script type="module" crossorigin src="/assets/index-DuiVOqMI.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BVBno2mc.css">
+    <title>TaskQuest - El Centro</title>
+    <meta name="description" content="TaskQuest - Tu plataforma gamificada de productividad universitaria" />
+
+    <!-- Script de inicialización de modo oscuro -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+
+    <!-- Tailwind CSS with Forms & Container Queries plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Custom Theme (Material You Design System) -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "var(--tertiary-container)",
+              "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+              "secondary-container": "var(--secondary-container)",
+              "on-background": "var(--on-background)",
+              "outline": "var(--outline)",
+              "primary-container": "var(--primary-container)",
+              "surface": "var(--surface)",
+              "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+              "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+              "inverse-surface": "var(--inverse-surface)",
+              "surface-container-highest": "var(--surface-container-highest)",
+              "on-error-container": "var(--on-error-container)",
+              "on-surface": "var(--on-surface)",
+              "error-container": "var(--error-container)",
+              "on-tertiary-container": "var(--on-tertiary-container)",
+              "on-error": "var(--on-error)",
+              "surface-container-high": "var(--surface-container-high)",
+              "background": "var(--background)",
+              "tertiary-fixed": "var(--tertiary-fixed)",
+              "surface-variant": "var(--surface-variant)",
+              "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+              "surface-tint": "var(--surface-tint)",
+              "primary": "var(--primary)",
+              "on-secondary-container": "var(--on-secondary-container)",
+              "on-secondary-fixed": "var(--on-secondary-fixed)",
+              "on-primary-fixed": "var(--on-primary-fixed)",
+              "inverse-on-surface": "var(--inverse-on-surface)",
+              "primary-fixed": "var(--primary-fixed)",
+              "error": "var(--error)",
+              "outline-variant": "var(--outline-variant)",
+              "on-surface-variant": "var(--on-surface-variant)",
+              "on-tertiary": "var(--on-tertiary)",
+              "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+              "surface-container-lowest": "var(--surface-container-lowest)",
+              "secondary-fixed": "var(--secondary-fixed)",
+              "on-primary": "var(--on-primary)",
+              "surface-container": "var(--surface-container)",
+              "primary-fixed-dim": "var(--primary-fixed-dim)",
+              "secondary": "var(--secondary)",
+              "surface-container-low": "var(--surface-container-low)",
+              "inverse-primary": "var(--inverse-primary)",
+              "on-primary-container": "var(--on-primary-container)",
+              "tertiary": "var(--tertiary)",
+              "on-secondary": "var(--on-secondary)",
+              "surface-bright": "var(--surface-bright)",
+              "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+              "surface-dim": "var(--surface-dim)"
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px"
+            },
+            spacing: {
+              base: "8px",
+              "margin-mobile": "20px",
+              "margin-desktop": "40px",
+              "gutter-sm": "16px",
+              "gutter-md": "24px",
+              "container-max": "1200px"
+            },
+            fontFamily: {
+              "label-lg": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "display-lg": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "label-sm": ["Plus Jakarta Sans"]
+            },
+            fontSize: {
+              "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+              "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+              "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+              "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }]
+            }
+          }
+        }
+      };
+    </script>
+    <script type="module" crossorigin src="/assets/index-hI2AI27U.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DFgunEOM.css">
   </head>
   <body>
     <div id="root"></div>
-    <!-- Tailwind Play CDN for quick styling + UMD React shims -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   </body>
 </html>

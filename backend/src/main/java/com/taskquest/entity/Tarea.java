@@ -19,9 +19,13 @@ public class Tarea {
 
     private Boolean completada = false;
 
+    private Boolean realizada = false;
+
     private Integer puntosExperiencia = 0;
 
     private LocalDate fechaCreacion;
+
+    private LocalDate fechaLimite;
 
     @ManyToOne
     @JoinColumn(name = "grupo_id")
@@ -62,6 +66,14 @@ public class Tarea {
         this.completada = completada;
     }
 
+    public Boolean getRealizada() {
+        return realizada;
+    }
+
+    public void setRealizada(Boolean realizada) {
+        this.realizada = realizada;
+    }
+
     public Integer getPuntosExperiencia() {
         return puntosExperiencia;
     }
@@ -80,4 +92,30 @@ public class Tarea {
 
     public Grupo getGrupo() { return grupo; }
     public void setGrupo(Grupo grupo) { this.grupo = grupo; }
+
+    public LocalDate getFechaLimite() { return fechaLimite; }
+    public void setFechaLimite(LocalDate fechaLimite) { this.fechaLimite = fechaLimite; }
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_asignado_id")
+    private Usuario usuarioAsignado;
+
+    public Usuario getUsuarioAsignado() {
+        return usuarioAsignado;
+    }
+
+    public void setUsuarioAsignado(Usuario usuarioAsignado) {
+        this.usuarioAsignado = usuarioAsignado;
+    }
+
+    @Enumerated(EnumType.STRING)
+    private EnvironmentType environmentType = EnvironmentType.UNIVERSITY;
+
+    public EnvironmentType getEnvironmentType() {
+        return environmentType;
+    }
+
+    public void setEnvironmentType(EnvironmentType environmentType) {
+        this.environmentType = environmentType;
+    }
 }

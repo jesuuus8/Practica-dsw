@@ -27,7 +27,7 @@ export default function PerfilUsuario(){
   return (
     <div className="bg-slate-800 p-4 rounded shadow mb-4">
       <div className="flex items-center gap-3">
-        <img src="/assets/avatar.png" alt="avatar" className="w-16 h-16 rounded-full border-2 border-indigo-500" />
+        <img src={user.imagenUrl || "/assets/avatar.png"} alt="avatar" className="w-16 h-16 rounded-full border-2 border-indigo-500" />
         <div>
           <div className="text-xl font-semibold text-slate-100">{user.nombre || 'Player'}</div>
           <div className="text-sm text-slate-300">Nivel {nivel} • {xp} XP</div>

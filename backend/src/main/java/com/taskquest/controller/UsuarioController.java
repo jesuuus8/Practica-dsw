@@ -2,10 +2,9 @@ package com.taskquest.controller;
 
 import com.taskquest.entity.Usuario;
 import com.taskquest.service.UsuarioService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuario")
@@ -21,5 +20,15 @@ public class UsuarioController {
     @GetMapping
     public Usuario obtenerUsuario() {
         return usuarioService.getOrCreateGlobalUser();
+    }
+
+    @GetMapping("/todos")
+    public List<Usuario> obtenerTodosLosUsuarios() {
+        return usuarioService.getAllUsers();
+    }
+
+    @PutMapping
+    public Usuario actualizarUsuario(@RequestBody Usuario usuario) {
+        return usuarioService.updateUser(usuario);
     }
 }

@@ -28,6 +28,17 @@ public class GrupoController {
 
     @PostMapping
     public ResponseEntity<Grupo> crear(@RequestBody Grupo grupo) {
+        if (grupo.getMiembros() == null) {
+            grupo.setMiembros(new java.util.HashSet<>());
+        }
+        if (grupo.getMiembros().isEmpty()) {
+            usuarioRepository.findFirstByOrderByIdAsc().ifPresent(u -> {
+                grupo.getMiembros().add(u);
+                if (grupo.getEnvironmentType() == null) {
+                    grupo.setEnvironmentType(u.getEnvironmentType());
+                }
+            });
+        }
         Grupo g = grupoRepository.save(grupo);
         return ResponseEntity.created(URI.create("/api/grupos/" + g.getId())).body(g);
     }

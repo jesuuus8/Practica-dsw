@@ -13,7 +13,7 @@
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend</name>
-	<description>Backend para el proyecto TaskQuest</description>
+	<description>Backend para el proyecto Gamify</description>
 
 	<properties>
 		<java.version>17</java.version>

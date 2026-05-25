@@ -21,6 +21,12 @@ public class Usuario {
 
     private String imagenUrl;
 
+    private String telefono;
+
+    private String email;
+
+    private Integer edad;
+
     public Usuario() {}
 
     public Usuario(String nombre) {
@@ -73,5 +79,51 @@ public class Usuario {
 
     public void setImagenUrl(String imagenUrl) {
         this.imagenUrl = imagenUrl;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    public void setEdad(Integer edad) {
+        this.edad = edad;
+    }
+
+    @Enumerated(EnumType.STRING)
+    private Role role = Role.ESTUDIANTE;
+
+    @Enumerated(EnumType.STRING)
+    private EnvironmentType environmentType = EnvironmentType.UNIVERSITY;
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public EnvironmentType getEnvironmentType() {
+        return environmentType;
+    }
+
+    public void setEnvironmentType(EnvironmentType environmentType) {
+        this.environmentType = environmentType;
     }
 }
