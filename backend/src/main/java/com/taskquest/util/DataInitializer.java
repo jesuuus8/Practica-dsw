@@ -45,6 +45,56 @@ public class DataInitializer implements CommandLineRunner {
             }
         }
 
+        // Si solo existe el usuario global, sembramos usuarios de prueba para la clasificación
+        if (usuarioRepository.count() <= 1) {
+            // Usuarios para entorno UNIVERSITY
+            Usuario u1 = new Usuario("Sara");
+            u1.setNivel(10);
+            u1.setXpActual(60);
+            u1.setPuntos(400);
+            u1.setRole(com.taskquest.entity.Role.ESTUDIANTE);
+            u1.setEnvironmentType(EnvironmentType.UNIVERSITY);
+            u1.setImagenUrl("https://lh3.googleusercontent.com/aida-public/AB6AXuCD0EFEpmSsu62hpej9QRsF8e5XUheWe4uxeKU1gnnXyd9OXrHfzCpRMv3yn6XhvKv-KFyry2DNI2DW-SQ4HSTbGVOQpVZLZRWAn45nwG3aDKcbPCyPta2wds3LbIkB8O6Ddc_kSsc2KbS-GLN9L6VE3jSCjz_j1m28d_Vl9UpXBfasWIvbzPo4NIZ1wQrDvaVC83lWFjIY1evWjYMx5Dy_ByvF4YbvCiekXSca00NQ3jwafbNoUuLG1vHLMyDjr9DqIdAZFi6b6s4");
+            usuarioRepository.save(u1);
+
+            Usuario u2 = new Usuario("Juan");
+            u2.setNivel(8);
+            u2.setXpActual(20);
+            u2.setPuntos(250);
+            u2.setRole(com.taskquest.entity.Role.ESTUDIANTE);
+            u2.setEnvironmentType(EnvironmentType.UNIVERSITY);
+            u2.setImagenUrl("https://lh3.googleusercontent.com/aida-public/AB6AXuC4ClzKjSwZHGhWbm9wQWhfvNzQXqyUyKESilqAfNaaZcN0vLQXvBev946XJN-VCT_g4BGquDOux1-nnyvSJgExaCfwTm1FhAa44fEnrhTu77aLf6iu77rvqeGoMK85RrtxNG72RCEJS0w4CTA0whUtr2LxjXlnK4qJnlYHIekAPbLdEQ1cHJGd0rB5JiSLPceZeHT7WGSTA4lZRN8h6-OYbh-QDayOHlqXo4_GEeqBqv67Nee_2-oN4zcxMwr8fRDKKQHmq4HZfYg");
+            usuarioRepository.save(u2);
+
+            // Usuarios para entorno FAMILY
+            Usuario u3 = new Usuario("Mamá");
+            u3.setNivel(15);
+            u3.setXpActual(80);
+            u3.setPuntos(900);
+            u3.setRole(com.taskquest.entity.Role.PADRES);
+            u3.setEnvironmentType(EnvironmentType.FAMILY);
+            u3.setImagenUrl("https://lh3.googleusercontent.com/aida-public/AB6AXuAa1Ey8dl5fTJkSD_XWQWxd8ZEqBHYRBPiQoEajoS3yG6JGsKo_8DnY2AqoBbHrLJ4bYDOy6avIPoBDpF_KeaCPrZpgsgce7f8EyAkIkWXm_nSpTe2kJ7nmNXEvHfcqnbVsOZfnu07eD6BOese3E0ZLonu9V4cl60lg9e9XFpast5rNEKfmBOcCVHDofhIWiMKS6E5rZjz4D-Cj_wqFRawcBDg45mxwuFVIPjsicVxbmIlNZ1VX-5CgiltLiCFwJDsYUju1X42ijio");
+            usuarioRepository.save(u3);
+
+            Usuario u4 = new Usuario("Papá");
+            u4.setNivel(14);
+            u4.setXpActual(50);
+            u4.setPuntos(750);
+            u4.setRole(com.taskquest.entity.Role.PADRES);
+            u4.setEnvironmentType(EnvironmentType.FAMILY);
+            u4.setImagenUrl("https://lh3.googleusercontent.com/aida-public/AB6AXuC4ClzKjSwZHGhWbm9wQWhfvNzQXqyUyKESilqAfNaaZcN0vLQXvBev946XJN-VCT_g4BGquDOux1-nnyvSJgExaCfwTm1FhAa44fEnrhTu77aLf6iu77rvqeGoMK85RrtxNG72RCEJS0w4CTA0whUtr2LxjXlnK4qJnlYHIekAPbLdEQ1cHJGd0rB5JiSLPceZeHT7WGSTA4lZRN8h6-OYbh-QDayOHlqXo4_GEeqBqv67Nee_2-oN4zcxMwr8fRDKKQHmq4HZfYg");
+            usuarioRepository.save(u4);
+
+            Usuario u5 = new Usuario("Hermano");
+            u5.setNivel(5);
+            u5.setXpActual(30);
+            u5.setPuntos(150);
+            u5.setRole(com.taskquest.entity.Role.FAMILIAR);
+            u5.setEnvironmentType(EnvironmentType.FAMILY);
+            u5.setImagenUrl("https://lh3.googleusercontent.com/aida-public/AB6AXuAvp_BV88Xg8jW_AId2FbrML7dmY-k6YoaIAs9RKXEnRMR3kDeefb6MyD97wDoGW8M3BCo7d5MN4R0S0fzsKbPC5W-_343OnZvf20WKAVE2KKklW-I8VTXep50sdnp3ypaR2MwwcYKu0ayVNFacXNHBJ0CdT2wkUKenBQav7SuA_Re8MPbx2Ylp36QGx9LhkSTTtKovdhhaKT2datt4nKATwxmdEu4pzCxPbwKHhDllJKm7Mi0wp1fbKscX1uNmnec5Alje3OymSk");
+            usuarioRepository.save(u5);
+        }
+
         // Si no hay tareas, sembramos las tareas semanales por defecto
         if (tareaRepository.count() == 0) {
             // Tareas Universitarias
